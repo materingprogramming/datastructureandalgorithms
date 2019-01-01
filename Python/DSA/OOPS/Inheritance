@@ -1,0 +1,20 @@
+#Uses python3
+
+class Animal(object):
+    def __init__(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+class Person(Animal):
+    def __init__(self, name, age):
+        Animal.__init__(self, name)
+        self.age = age
+
+    def get_age(self):
+        return self.age
+
+muthu = Person("muthu", 36)
+print(muthu.get_name())
+print(muthu.get_age())
